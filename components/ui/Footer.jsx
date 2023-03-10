@@ -6,12 +6,13 @@ import twitter from "@/public/twitter.png";
 import linkedin from "@/public/linkedin.png";
 import Link from "next/link";
 import { colors, resFont } from "@/styles/GlobalStyle";
+import BlueButton from "@/components/ui/BlueButton";
 
 const Footer = () => {
   return (
     <FooterWrapper className="custom-container">
       <Row>
-        <Col lg="4">
+        <Col xl="4">
           <div className="footer-box">
             <Link href="/">
               <h1 className="int-cf">NFTERS</h1>
@@ -34,6 +35,74 @@ const Footer = () => {
             </div>
           </div>
         </Col>
+        <Col xl="2" sm="6">
+          <div className="footer-box">
+            <h2 className="dm-sans">Market Place</h2>
+            <ul className="footer-list dm-sans">
+              <li>
+                <Link href="/">All NFT's</Link>
+              </li>
+              <li>
+                <Link href="/">New</Link>
+              </li>
+              <li>
+                <Link href="/">Art</Link>
+              </li>
+              <li>
+                <Link href="/">Sports</Link>
+              </li>
+              <li>
+                <Link href="/">Utility</Link>
+              </li>
+              <li>
+                <Link href="/">Music</Link>
+              </li>
+              <li>
+                <Link href="/">Domain Name</Link>
+              </li>
+            </ul>
+          </div>
+        </Col>
+        <Col xl="2" sm="6">
+          <div className="footer-box">
+            <h2 className="dm-sans">My Account</h2>
+            <ul className="footer-list dm-sans">
+              <li>
+                <Link href="/">Profile</Link>
+              </li>
+              <li>
+                <Link href="/">Favorite</Link>
+              </li>
+              <li>
+                <Link href="/">My Collections</Link>
+              </li>
+              <li>
+                <Link href="/">Settings</Link>
+              </li>
+            </ul>
+          </div>
+        </Col>
+        <Col xl="4">
+          <div className="footer-box">
+            <h2 className="dm-sans">Stay In The Loop</h2>
+            <p className="dm-sans mail-text">
+              Join our mailing list to stay in the loop with our newest feature
+              releases, NFT drops, and tips and tricks for navigating NFTs.
+            </p>
+            <div className="email-box">
+              <input
+                type="text"
+                placeholder="Enter your email address"
+                className="dm-sans"
+              />
+              <BlueButton
+                text="Subscribe Now"
+                fontSize="18"
+                fontFamily="dm-sans"
+              />
+            </div>
+          </div>
+        </Col>
       </Row>
     </FooterWrapper>
   );
@@ -42,20 +111,66 @@ const Footer = () => {
 export default Footer;
 
 const FooterWrapper = styled.footer`
-  padding-top: 80px;
+  padding-top: 40px;
   padding-bottom: 80px;
+  .footer-box {
+    margin-top: 40px;
+  }
   h1 {
     font-size: ${resFont(24, 28)};
+  }
+  h2 {
+    font-size: ${resFont(20, 22)};
+    font-weight: 700;
   }
   p {
     margin-top: 30px;
     color: ${colors.textgray};
+    max-width: 380px;
+  }
+  .mail-text {
+    color: ${colors.black};
+    max-width: 100%;
   }
   .social {
     margin-top: 30px;
     display: flex;
     img {
       margin-right: 16px;
+    }
+  }
+  .footer-list {
+    margin-top: 35px;
+    li {
+      margin-top: 10px;
+      a {
+        color: ${colors.black};
+        font-weight: 500;
+      }
+      &:nth-child(1) {
+        margin-top: 0;
+      }
+    }
+  }
+  .email-box {
+    border: 2px solid ${colors.lightgray};
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 60px;
+    margin-top: 30px;
+    input {
+      width: 100%;
+      flex: 1;
+      border: none;
+      padding: 0px 20px;
+      &:focus {
+        outline: none;
+      }
+    }
+    button {
+      white-space: nowrap;
+      padding: 10px 30px;
     }
   }
 `;

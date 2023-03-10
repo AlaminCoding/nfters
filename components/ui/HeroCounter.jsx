@@ -7,7 +7,12 @@ const HeroCounter = () => {
   const [remain, setRemain] = useState({});
   useEffect(() => {
     const timerInterval = setInterval(() => {
-      setRemain(showCountdown("03/18/2023"));
+      // setRemain(showCountdown("03/18/2023"));
+      setRemain(
+        showCountdown(
+          "Fri Mar 20 2023 17:22:04 GMT+0600 (Bangladesh Standard Time)"
+        )
+      );
     }, 1000);
 
     return () => clearInterval(timerInterval);
@@ -23,9 +28,11 @@ const HeroCounter = () => {
       <div className="end">
         <p className="dm-sans">Ends In</p>
         <h2>
-          <span>
-            <b>{remain.day}</b>d
-          </span>
+          {remain.day > 0 ? (
+            <span>
+              <b>{remain.day}</b>d
+            </span>
+          ) : null}
           <span>
             <b>{remain.hour}</b>h
           </span>

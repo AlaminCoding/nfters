@@ -28,6 +28,7 @@ export const colors = {
   lightBlue: "#D9E0EC",
   green: "#00AC4F",
   red: "#FF002E",
+  black: "#363639",
 };
 
 // Global Style

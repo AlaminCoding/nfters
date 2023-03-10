@@ -118,7 +118,8 @@ const Box = styled.div`
       background-color: transparent;
       border: none;
       font-weight: 500;
-      font-size: 18px;
+      font-size: 16px;
+      white-space: nowrap;
     }
   }
 `;

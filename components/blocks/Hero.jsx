@@ -9,7 +9,7 @@ import Img2 from "@/public/img2.png";
 import Img3 from "@/public/img3.png";
 import user from "@/public/user.png";
 import CircleImg from "@/public/hero-circle.png";
-import HeroCounter from "../ui/HeroCounter";
+import HeroCounter from "@/components/ui/HeroCounter";
 
 const Hero = () => {
   return (
@@ -30,11 +30,16 @@ const Hero = () => {
           <HeroImg>
             <div className="img-box">
               <div className="single-img">
-                <Image src={Img1} className="img1" alt="hero image 1" />
+                <Image
+                  src={Img1}
+                  className="img1"
+                  alt="hero image 1"
+                  priority={true}
+                />
                 <div className="img-top">
                   <h2 className="dm-sans">Abstr Gradient NFT</h2>
                   <div className="user">
-                    <Image src={user} alt="hero user image" />
+                    <Image src={user} alt="hero user image" priority={true} />
                     <h3 className="dm-sans">Arkhan17</h3>
                   </div>
                 </div>
@@ -42,11 +47,21 @@ const Hero = () => {
                   <HeroCounter />
                 </div>
               </div>
-              <Image src={Img2} className="img2" alt="hero image 2" />
-              <Image src={Img3} className="img3" alt="hero image 3" />
+              <Image
+                src={Img2}
+                className="img2"
+                alt="hero image 2"
+                priority={true}
+              />
+              <Image
+                src={Img3}
+                className="img3"
+                alt="hero image 3"
+                priority={true}
+              />
             </div>
             <div className="circle-img d-none d-xl-block">
-              <Image src={CircleImg} alt="Circle Img" />
+              <Image src={CircleImg} alt="Circle Img" priority={true} />
             </div>
           </HeroImg>
         </Col>

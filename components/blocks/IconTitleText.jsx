@@ -51,6 +51,9 @@ export default IconTitleText;
 const Wrapper = styled.div`
   padding: 100px 0px;
   background-color: rgba(217, 224, 236, 0.2);
+  @media screen and (max-width: 768px) {
+    padding: 60px 0px;
+  }
   .title {
     max-width: 450px;
     font-size: ${resFont(24, 32)};

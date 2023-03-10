@@ -75,8 +75,8 @@ const ArtCategory = () => {
             {artData.map((element, index) => {
               return (
                 <Col
-                  lg="3"
-                  md="4"
+                  xl="3"
+                  lg="4"
                   sm="6"
                   key={"category-data-" + index}
                   className="art-col"
@@ -164,10 +164,10 @@ const Categories = styled.div`
 
 const Arts = styled.div`
   .art-row {
-    margin: 0px -30px;
+    margin: 0px -10px;
   }
   .art-col {
-    padding: 0px 30px;
+    padding: 0px 10px;
   }
 `;
 
