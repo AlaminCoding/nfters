@@ -104,6 +104,7 @@ const Footer = () => {
           </div>
         </Col>
       </Row>
+      <p className="copy averta">Copyright © 2022 Avi Yansah</p>
     </FooterWrapper>
   );
 };
@@ -112,7 +113,9 @@ export default Footer;
 
 const FooterWrapper = styled.footer`
   padding-top: 40px;
-  padding-bottom: 80px;
+  @media screen and (max-width: 768px) {
+    padding-top: 0px;
+  }
   .footer-box {
     margin-top: 40px;
   }
@@ -131,6 +134,18 @@ const FooterWrapper = styled.footer`
   .mail-text {
     color: ${colors.black};
     max-width: 100%;
+  }
+  .copy {
+    margin-top: 80px;
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0px;
+    border-top: 1px solid ${colors.lightgray};
+    color: ${colors.textgray};
+    @media screen and (max-width: 768px) {
+      margin-top: 30px;
+    }
   }
   .social {
     margin-top: 30px;
@@ -171,6 +186,21 @@ const FooterWrapper = styled.footer`
     button {
       white-space: nowrap;
       padding: 10px 30px;
+    }
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+      border: none;
+      input {
+        border: 2px solid ${colors.lightgray};
+        height: 50px;
+        flex: auto;
+        border-radius: 30px;
+      }
+      button {
+        margin-top: 20px;
+      }
     }
   }
 `;
